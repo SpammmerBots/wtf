@@ -1,0 +1,28 @@
+{
+
+    "name": " wtf.js",
+
+    "version": "2.1.0",
+
+    "description": "-- AWESOMENESS --",
+
+    "main": " wtf.js",
+
+    "scripts": {
+
+      "start": "node wtf.js"
+
+
+    },
+
+    "dependencies": {
+        "discord.js": "^11.3.2"
+        },
+
+    "engines": {
+
+      "node": "8.4.0"
+
+    }
+
+  }
