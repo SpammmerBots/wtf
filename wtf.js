@@ -10,7 +10,7 @@ client.on('message', message => {
 
    if(!message.channel.guild) return;
 
-if(message.content.startsWith(prefix + 'bc')) {
+if(message.content.startsWith(prefix + 'BC')) {
 
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 
@@ -112,12 +112,12 @@ msg.delete();
     let args = message.content.split(" ").slice(1);
 
     if(!args[0]) {
-      message.channel.send("قم بمنشنه رتبه معينه");
+      message.channel.send("**:question:قم بمنشنه رتبه معينه **");
         return;
     }
 
       if(args[0] == "@everyone") {
-        message.channel.send(`لقد تم ارسال هذه الرسالة الى ${message.guild.memberCount} اعضاء`);
+        message.channel.send(`**لقد تم ارسال هذه الرسالة الى ${message.guild.memberCount} اعضاء**`);
         message.guild.members.forEach(mi => {
           mi.send(
           "الرسالة :" + "\n" +
@@ -128,16 +128,16 @@ msg.delete();
       }
           var role = message.mentions.roles.first();
             if(!role) {
-              message.reply("يرجا كتابه اسم رتبه موجوده");
+              message.reply("**يرجا كتابه اسم رتبه موجوده**");
                 return;
             }
         message.guild.members.filter(m => m.roles.get(role.id)).forEach(sa => {
         sa.send(
-          "الرساله :" + "\n" +
+          "**Message:scroll: **" + "\n" +
         "**" + `${args[1]}` + "**"
           );
         });
-      message.channel.send(`**لقد تم ارسال هذه الرسالة الى ${message.guild.members.filter(m => m.roles.get(role.id)).size} عظو**`);
+      message.channel.send(`**لقد تم ارسال هذه الرسالة الى ${message.guild.members.filter(m => m.roles.get(role.id)).size} عضو**`);
     }
 });
 client.login(process.env.BOT_TOKEN); 
